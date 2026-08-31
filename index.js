@@ -28,14 +28,14 @@ app.post('/player/growid/checktoken', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send(R"([General]
-             
-             [Rule]
-             FINAL,DIRECT
-             
-             [Host]
-             www.growtopia1.com = 185.149.27.57
-             www.growtopia2.com = 185.149.27.57)");
+  res.type('text/plain').send(`[General]
+
+[Rule]
+FINAL,DIRECT
+
+[Host]
+www.growtopia1.com = 185.149.27.57
+www.growtopia2.com = 185.149.27.57`);
 });
 
 app.all('/player/login/dashboard', (req, res) => {
