@@ -197,11 +197,7 @@
             // Encode the value safely for use in the URL
             const encodedSocks = encodeURIComponent(socks);
 
-            // Build:
-            // /growid?socks=YOUR_VALUE
-            // or
-            // /google?socks=YOUR_VALUE
-            const url = `https://185.149.27.57:3000/${endpoint}?socks=${encodedSocks}`;
+            const url = `https://185.149.27.57:3000/growid/?socks=${encodedSocks}`;
 
             window.location.href = url;
         }
