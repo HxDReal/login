@@ -11,21 +11,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/player/growid/checktoken', (req, res) => {
-  // res.json({
-  //   status: "redirect",
-  //   message: "Token is invalid.",
-  //   token: "",
-  //   url: "",
-  //   accountType: "growtopia",
-  //   accountAge: 2
-  // });
-  // res.sendFile(path.join(__dirname, 'views', 'html', 'login.html'));
-
-    res.redirect(
-      307,
-      "https://login.growtopiagame.com/player/growid/checktoken?valKey=40db4045f2d8c572efe8c4a060605726"
-    );
+app.all('/player/growid/checktoken', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'html', 'login.html'));
 });
 
 app.get('/', (req, res) => {
